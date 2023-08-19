@@ -1,0 +1,14 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rmq-demo
+spec:
+  replicas: 1
+  service:
+    type: LoadBalancer
+  # rabbitmq:  
+  #   additionalConfig: |
+  #     default_user=guest
+  #     default_pass=guest  
+  # persistence:
+  #   storage: "2Gi"
