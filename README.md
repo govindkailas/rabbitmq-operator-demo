@@ -40,7 +40,7 @@ To verify the connection, you can connect to the API or the Web UI
 curl -u${username}:${password} ${rmqLBIP}:15672/api/overview | jq
 ```
 
-
+![Producer/Consumer model](image.png)
 
 2. Run the Producer app:
 ```
@@ -72,4 +72,7 @@ kubectl logs -f pod/perf-test
 ```
 
 
-Referances and credits to - https://github.com/koterin/broker
+Referances and credits to the below,
+https://www.rabbitmq.com/tutorials/tutorial-one-go.html
+https://github.com/koterin/broker
+cloudamqp.com/blog/part1-rabbitmq-for-beginners-what-is-rabbitmq.htm
