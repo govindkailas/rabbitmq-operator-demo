@@ -27,12 +27,18 @@ Set the below env variables
 username="$(kubectl get secret rmq-demo-default-user -o jsonpath='{.data.username}' | base64 --decode)"
 password="$(kubectl get secret rmq-demo-default-user -o jsonpath='{.data.password}' | base64 --decode)"
 rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.loadBalancer.ingress[].ip}')
+## rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.clusterIP') ## if clusterIP user this
 RMQ_SERVER_URL="amqp://${username}:${password}@${rmqLBIP}:5672/" 
 export RMQ_SERVER_URL=$RMQ_SERVER_URL
 
 ```
 
-We are exposing the service as a LoadBalancer, if its not suppored on your cluster, you can always leave it as ClusterIP and portforward to local.
+We are exposing the service as a LoadBalancer, if its not suppored on your cluster, you can always leave it as default(ClusterIP)  portforward to local.
+
+To verify the connection, you can connect to the API or the Web UI
+```
+curl -u${username}:${password} ${rmqLBIP}:15672/api/overview | jq
+```
 
 
 
@@ -58,6 +64,11 @@ Consumer1 also receives no more than 2 messages at once, Consumer2 - no more tha
 4. Let us do a perf test of the RabbitMQ 
 ```
 kubectl run perf-test --image=pivotalrabbitmq/perf-test -- --uri amqp://${username}:${password}@${rmqLBIP}
+```
+
+To check the logs of perf test 
+```
+kubectl logs -f pod/perf-test
 ```
 
 
