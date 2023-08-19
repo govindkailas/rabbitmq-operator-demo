@@ -3,7 +3,7 @@ kind: RabbitmqCluster
 metadata:
   name: rmq-demo
 spec:
-  replicas: 1
+  replicas: 1  # or 3 for mirrored and quorum queues
   service:
     type: LoadBalancer
   # rabbitmq:  
