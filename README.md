@@ -32,7 +32,7 @@ Set the below env variables
 username="$(kubectl get secret rmq-demo-default-user -o jsonpath='{.data.username}' | base64 --decode)"
 password="$(kubectl get secret rmq-demo-default-user -o jsonpath='{.data.password}' | base64 --decode)"
 rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.loadBalancer.ingress[].ip}')
-## rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.clusterIP') ## if clusterIP user this
+## rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.clusterIP}') ## if clusterIP user this
 RMQ_SERVER_URL="amqp://${username}:${password}@${rmqLBIP}:5672/" 
 export RMQ_SERVER_URL=$RMQ_SERVER_URL
 
@@ -42,7 +42,8 @@ We are exposing the service as a LoadBalancer, if its not suppored on your clust
 
 To verify the connection, you can connect to the API or the Web UI
 ```
-curl -u${username}:${password} ${rmqLBIP}:15672/api/overview | jq
+# Get the complete configs of the current cluster
+curl -s -u${username}:${password} ${rmqLBIP}:15672/api/overview | jq
 ```
 
 Before producing to publishing messages, take a look at the below image to understand what's going to happen.
