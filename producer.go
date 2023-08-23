@@ -26,7 +26,7 @@ func main() {
 	defer ch.Close()
 
 	// https://www.rabbitmq.com/tutorials/tutorial-one-go.html
-	q := queueDeclare("notesDur", ch) // declare a queue, then excange will publish to this queue.
+	q := queueDeclare("rabbitmq-demo", ch) // declare a queue, then excange will publish to this queue.
 
 	log.Println("Enter your message: ")
 
