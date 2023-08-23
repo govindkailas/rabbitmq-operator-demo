@@ -42,7 +42,7 @@ func main() {
 	failOnError(err, "Failed to declare a queue")
 
 	err = ch.Qos(
-		2,     // prefetch count
+		5,     // prefetch count
 		0,     // prefetch size
 		false, // global
 	)
