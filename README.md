@@ -78,6 +78,7 @@ To check the logs of perf test
 kubectl logs -f pod/perf-test
 ```
 
+I have more examples here on how to send a json payload to Rabbitmq - https://github.com/govindkailas/curl_RMQ_post
 
 Referances and credits to the below,
 - https://www.rabbitmq.com/tutorials/tutorial-one-go.html
