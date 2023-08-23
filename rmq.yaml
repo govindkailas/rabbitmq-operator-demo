@@ -3,10 +3,12 @@ kind: RabbitmqCluster
 metadata:
   name: rmq-demo
 spec:
-  replicas: 1  # or 3 for mirrored and quorum queues
+  replicas: 3  # or 3 for mirrored and quorum queues
   service:
     type: LoadBalancer
-  # rabbitmq:  
+  rabbitmq:
+    additionalPlugins:
+      - rabbitmq_stream_management # Enable Streaming
   #   additionalConfig: |
   #     default_user=guest
   #     default_pass=guest  
