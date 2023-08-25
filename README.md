@@ -98,7 +98,7 @@ pod "perf-test" deleted
 
 More examples here on how to send a json payload to Rabbitmq - https://github.com/govindkailas/curl_RMQ_post
 
-5. Now if you are interested in the RabbitMQ Streams, try the below,
+5. Now if you are interested in the RabbitMQ Streams(https://www.rabbitmq.com/streams.html), try the below,
 We will utilise the same RabbitMQ cluster to create few streams and publish 50 messages. There is also a consumers which would immediatly consume the messages.
 
 ```
@@ -107,6 +107,7 @@ go run streams.go
 
 ![streams](image-1.png)
 
+With `RabbitMQ Streams` in place, you dont have to search for another application (eg: `Kafka`) for streaming.
 
 Referances and credits to the below,
 - https://www.rabbitmq.com/tutorials/tutorial-one-go.html
