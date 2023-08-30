@@ -66,7 +66,7 @@ go run .
 cd consumer2
 go run .
 ```
-It will connect to the RabbitMQ queue and print all the messages awaiting; each consumer also imitates some work going on by sleeping for 10 seconds after receiving each message. The RabbitMQ acknowledgement is done manually by marking `d.Ack(false)` after every message processing. For eg; you can insert the data to a database and based on the commit message from the DB you could sent the `ack` to RabbitMQ. 
+It will connect to the RabbitMQ queue and print all the messages awaiting; each consumer also imitates some work going on by sleeping for 10 seconds after receiving each message. The RabbitMQ acknowledgement is done manually by marking `d.Ack(false)` after every message processing. For eg; you can insert the data to a database and based on the commit message from the DB you could sent the `ack` to RabbitMQ. The `consumer1` have this logic implemented. It will push the data to a Postgres database table before sendind the `ack`.
 Consumer1 also receives no more than 2 messages at once, Consumer2 - no more than 1
 
 
