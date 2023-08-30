@@ -1,9 +1,11 @@
 package main
 
 import (
+	"context"
 	"log"
 	"os"
-	"time"
+
+	"github.com/jackc/pgx/v5"
 
 	amqp "github.com/rabbitmq/amqp091-go"
 )
@@ -48,6 +50,14 @@ func main() {
 	)
 	failOnError(err, "Failed to set QoS")
 
+	// Postgres DB connection settings
+	// export POSTGRES_URL="postgres://user:password@localhost:5432/mydb"
+	db, err := pgx.Connect(context.Background(), os.Getenv("POSTGRES_URL"))
+	if err != nil {
+		log.Fatalf("failed to connect to PostgreSQL: %v", err)
+	}
+	defer db.Close(context.Background())
+
 	msgs, err := ch.Consume(
 		q.Name, // queue
 		"",     // consumer
@@ -64,8 +74,12 @@ func main() {
 	go func() {
 		for d := range msgs {
 			log.Println("Received a message: ", string(d.Body))
-			time.Sleep(5 * time.Second)
-			d.Ack(false)
+
+			_, err = db.Exec(context.Background(), "INSERT INTO consumer_data (data,consumer_name) VALUES ($1,$2)", string(d.Body), "consumer1")
+			if err != nil {
+				log.Fatalf("Failed to insert data into PostgreSQL: %v", err)
+			}
+			d.Ack(false) // we are good to mark the msg as acked now as its inserted to the DB
 		}
 	}()
 
