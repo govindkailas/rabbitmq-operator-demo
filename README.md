@@ -35,6 +35,9 @@ export rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.loadBalancer.ingress[]
 ## export rmqLBIP=$(k get svc rmq-demo -o jsonpath='{.status.clusterIP}') ## if clusterIP user this
 export RMQ_SERVER_URL="amqp://${username}:${password}@${rmqLBIP}:5672/" 
 
+#For consumer1
+export POSTGRES_URL="postgres://user:password@localhost:5432/mydb"
+
 
 ```
 These variables will be used in the `go` code below, without the variables it's not going to work.
@@ -66,7 +69,9 @@ go run .
 cd consumer2
 go run .
 ```
-It will connect to the RabbitMQ queue and print all the messages awaiting; each consumer also imitates some work going on by sleeping for 10 seconds after receiving each message. The RabbitMQ acknowledgement is done manually by marking `d.Ack(false)` after every message processing. For eg; you can insert the data to a database and based on the commit message from the DB you could sent the `ack` to RabbitMQ. The `consumer1` have this logic implemented. It will push the data to a Postgres database table before sendind the `ack`.
+It will connect to the RabbitMQ queue and print all the messages awaiting; each consumer also imitates some work going on by sleeping for 10 seconds after receiving each message. The RabbitMQ acknowledgement is done manually by marking `d.Ack(false)` after every message processing. 
+
+For eg; you can insert the data to a database and based on the commit message from the DB you could sent the `ack` to RabbitMQ. The `consumer1` have this logic implemented. It will push the consumed messages to a Postgres database table before sendind the `ack`. Use the `data.sql` to create the table if you wish.
 Consumer1 also receives no more than 2 messages at once, Consumer2 - no more than 1
 
 
