@@ -1,10 +1,11 @@
 # RabbitMQ Operator Demo
 We are going to try a simple RabbitMQ cluster created using RabbitMQ operator. Once the cluster is up, will use the `go` producer to publish some messages.
 We will later consume those messages using the consumers.
+The RabbitMQ Cluster installation also include the Streams, so now you have classic queue and steams(pub/sub) in one place.  
 
 
 # Prerequsites
-1. Expect that you already have a working kubernetes cluster with the needed permissions to run everything.
+1. Expect that you already have a working kubernetes cluster with the cluster admin role to run everything.
 2. Go must be installed
 
 ## Install RabbitMQ Cluster Operator
@@ -104,7 +105,7 @@ pod "perf-test" deleted
 More examples here on how to send a json payload to Rabbitmq - https://github.com/govindkailas/curl_RMQ_post
 
 5. Now if you are interested in the RabbitMQ Streams(https://www.rabbitmq.com/streams.html), try the below,
-We will utilise the same RabbitMQ cluster to create few streams and publish 50 messages. There is also a consumers which would immediatly consume the messages.
+We will utilise the same RabbitMQ cluster to create few streams and publish 50 messages. This includes consumers as well which would immediatly consume the messages from the steams.
 
 ```
 go run streams.go
