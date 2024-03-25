@@ -5,7 +5,7 @@ go 1.18
 replace github.com/koterin/broker/rabbitmq/pserver => ./pserver
 
 require (
-	github.com/google/uuid v1.3.1
+	github.com/google/uuid v1.6.0
 	github.com/rabbitmq/amqp091-go v1.9.0
 	github.com/rabbitmq/rabbitmq-stream-go-client v1.2.0
 )
