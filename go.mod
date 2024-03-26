@@ -5,14 +5,14 @@ go 1.18
 replace github.com/koterin/broker/rabbitmq/pserver => ./pserver
 
 require (
-	github.com/google/uuid v1.3.1
+	github.com/google/uuid v1.6.0
 	github.com/rabbitmq/amqp091-go v1.9.0
-	github.com/rabbitmq/rabbitmq-stream-go-client v1.2.0
+	github.com/rabbitmq/rabbitmq-stream-go-client v1.3.3
 )
 
 require (
 	github.com/golang/snappy v0.0.4 // indirect
-	github.com/klauspost/compress v1.16.5 // indirect
+	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 )
