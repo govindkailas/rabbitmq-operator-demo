@@ -46,6 +46,8 @@ github.com/rabbitmq/rabbitmq-stream-go-client v1.4.8 h1:eWLWVl9jo8QM1tFHWqaj0a77
 github.com/rabbitmq/rabbitmq-stream-go-client v1.4.8/go.mod h1:SdWsW0K5FVo8lIx0lCH17wh7RItXEQb8bfpxVlTVqS8=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.4.9 h1:FWpWKbR/4vvYlBb//SC3/rGFqfQ8Xkwc8v1oYT6cEM8=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.4.9/go.mod h1:SdWsW0K5FVo8lIx0lCH17wh7RItXEQb8bfpxVlTVqS8=
+github.com/rabbitmq/rabbitmq-stream-go-client v1.4.10 h1:1kDn/orisEbfMtxdZwWKpxX9+FahnzoRCuGCLZ66fAc=
+github.com/rabbitmq/rabbitmq-stream-go-client v1.4.10/go.mod h1:SdWsW0K5FVo8lIx0lCH17wh7RItXEQb8bfpxVlTVqS8=
 github.com/spaolacci/murmur3 v1.1.0 h1:7c1g84S4BPRrfL5Xrdp6fOJ206sU9y293DDHaoy0bLI=
 github.com/spaolacci/murmur3 v1.1.0/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
