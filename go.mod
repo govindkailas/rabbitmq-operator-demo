@@ -1,13 +1,13 @@
 module github.com/koterin/broker/rabbitmq
 
-go 1.23.0
+go 1.24.0
 
 replace github.com/koterin/broker/rabbitmq/pserver => ./pserver
 
 require (
 	github.com/google/uuid v1.6.0
 	github.com/rabbitmq/amqp091-go v1.10.0
-	github.com/rabbitmq/rabbitmq-stream-go-client v1.6.0
+	github.com/rabbitmq/rabbitmq-stream-go-client v1.6.1
 )
 
 require (
