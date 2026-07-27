@@ -35,6 +35,8 @@ github.com/klauspost/compress v1.18.6 h1:2jupLlAwFm95+YDR+NwD2MEfFO9d4z4Prjl1XXD
 github.com/klauspost/compress v1.18.6/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
 github.com/klauspost/compress v1.19.0 h1:sXLILfc9jV2QYWkzFOPWStmcUVH2RHEB1JCdY2oVvCQ=
 github.com/klauspost/compress v1.19.0/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
+github.com/klauspost/compress v1.19.1 h1:VsB4HPswih7mmZ8WleSFQ75c/Ui1M4trX5oAsJnhSlk=
+github.com/klauspost/compress v1.19.1/go.mod h1:cwPg85FWrGar70rWktvGQj8/hthj3wpl0PGDogxkrSQ=
 github.com/kr/pretty v0.1.0/go.mod h1:dAy3ld7l9f0ibDNOQOHHMYYIIbhfbHSm3C4ZsoJORNo=
 github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
@@ -105,6 +107,8 @@ github.com/rabbitmq/rabbitmq-stream-go-client v1.8.1 h1:9EGkg16MJvzu/cA+Cfm4DRsc
 github.com/rabbitmq/rabbitmq-stream-go-client v1.8.1/go.mod h1:p3VvwkjFj8EK3GF0f8RUB7mioQcHaomHTGez4SnBWuc=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.8.2 h1:jf3nF/jkw/vSGstVxGBB7xqg0SoMLshIVe/DFJJ8rIE=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.8.2/go.mod h1:NV5l9Smolc0Bn8LjY5XQWHQXtDzoRFCumZI8rI0mnR8=
+github.com/rabbitmq/rabbitmq-stream-go-client v1.8.3 h1:vbq4TFWTkSy8Nq2UYPWpRs/M+xbDTE/3EUZ+/+ZZZ7A=
+github.com/rabbitmq/rabbitmq-stream-go-client v1.8.3/go.mod h1:K7ZMRvdpEu3joY5aVNl5gqBeLq1ks9swo4KxMq5ln1o=
 github.com/spaolacci/murmur3 v1.1.0 h1:7c1g84S4BPRrfL5Xrdp6fOJ206sU9y293DDHaoy0bLI=
 github.com/spaolacci/murmur3 v1.1.0/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
