@@ -65,6 +65,8 @@ github.com/rabbitmq/amqp091-go v1.14.0 h1:RSaT7aOKt/OrkVUyswPDW29lnRz9psuGmfZFBm
 github.com/rabbitmq/amqp091-go v1.14.0/go.mod h1:Hy4jKW5kQART1u+JkDTF9YYOQUHXqMuhrgxOEeS7G4o=
 github.com/rabbitmq/amqp091-go v1.15.0 h1:LEQL4/yp48/Wigt6A6XOu18RQRo8ZHtB5I/KZJn+gkw=
 github.com/rabbitmq/amqp091-go v1.15.0/go.mod h1:Hy4jKW5kQART1u+JkDTF9YYOQUHXqMuhrgxOEeS7G4o=
+github.com/rabbitmq/amqp091-go v1.16.0 h1:1O8oQqnj9hLACoo6CVMgn57z2pLWXvgemhh4GsquV+Y=
+github.com/rabbitmq/amqp091-go v1.16.0/go.mod h1:Hy4jKW5kQART1u+JkDTF9YYOQUHXqMuhrgxOEeS7G4o=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.2.0 h1:JvmF+OHbz3ZpHjtUxnKHkpp5m2vZdd2zWL2efaRcjis=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.2.0/go.mod h1:zxyTjagrlRuUaoZoWFpWiW/viQ6W/eyuXj9IOAvAZOo=
 github.com/rabbitmq/rabbitmq-stream-go-client v1.3.3 h1:FofaLxJq6jfCBUSYAmFAfaJ/pkLziTm5tY76IDk0LBQ=
